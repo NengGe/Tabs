@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/tabs.css">
+    <script src="./js/tabs.js"></script>
+    <script>
+        window.onload = function () {
+            // G('.choice').removeClass('tabs-box');
+            //    console.log(G('.content').eq(0).children('ul'));
+            // G('.tabs-ul li').on('click', function () {
+            //     alert(G(this).index());
+            // });
+            // console.log(G('.tabs-ul').parents('div.choice'));
+            G('.choice').Tabs({  //直接调用Tabs方法，插件开始。
+                evType:'click', //选取对应选项卡时的事件
+            });
+        }
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .choice {
+            margin: 10px auto;
+            width: 500px;
+            height: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="choice tabs-box">
+        <div class="tabs-header">
+            <ul class="tabs-ul">
+                <li class="active" id="#tab1">选项卡一</li>
+                <li id="#tab2">选项卡二</li>
+                <li id="#tab3">选项卡三</li>
+            </ul>
+        </div>
+        <div class="content" style="display:block;" id="tab1">
+            <p>爱奇艺</p>
+            <ul>kdsfhskfhsk hsk</ul>
+            <ul>kdsfhskfhsk hsk</ul>
+            <ul>kdsfhskfhsk hsk</ul>
+            <ul>kdsfhskfhsk hsk</ul>
+        </div>
+        <div class="content" id="tab3">
+            <p>腾讯视频</p>
+        </div>
+        <div class="content" id="tab2">
+            <p>快播</p>
+        </div>
+    </div>
+</body>
+
+</html>
